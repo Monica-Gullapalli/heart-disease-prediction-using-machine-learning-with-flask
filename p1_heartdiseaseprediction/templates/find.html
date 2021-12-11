@@ -1,0 +1,148 @@
+<html>
+<head>
+	<title> Predict Heart Disease</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<style>*{font-size: 40px; }
+#entry{
+	font-size: 20px;
+	height: 40px;
+	width: 360px;
+	border-radius: 5px;
+	background-color: #f7f7f7;	
+}
+#entry:hover{
+	background-color: #fcfcfc;
+}
+	#submit{
+	border-radius: 8px;
+	background-color: #94d6e3;
+	width:230px;
+}
+#submit{
+	font-size: 25px;
+	border-radius: 8px;
+	background-color: #94d6e3;
+	width:230px;
+}
+#submit:hover{
+	background-color: #2d8ea1;
+}
+#submitl{
+	border-radius: 5px;
+	background-color: #f8dbff;
+	font-size: 20px;
+}
+*{font-size:40px;}
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #fff36b;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color:#c0ebe6;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 400px;
+  border-radius: 20%;
+}
+@media only screen and (max-width: 600px) {
+.right {
+  right: 0;
+  background-color:#c0ebe6;
+}	
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+}
+
+</style>
+</head>
+<body>
+<center>
+
+<div class = "bg">
+<center>
+<div class="split left">
+  <div class="centered">
+    <img class = "img" src="https://i.pinimg.com/564x/f8/52/9c/f8529c3ee32672146fb127cf1e27af54.jpg" alt="Heart">
+	<h5> Heart Disease Prediction</h5>
+	<h1>Welcome {{ name }} </h1>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+	<h3>Fill the form below to check if you have heart disease or not! </h3>
+	<form action = "/check" method = "POST">
+	<br>
+	<input type = "number" name = "age" placeholder = "Enter Age" required id = "entry">
+	<br>
+	<h4>Chest Pain Type:  </h4>
+	<h4>
+	<input type = "radio" name = "r1" value = "1" checked id = "num" > 1 </input>
+	<input type = "radio" name = "r1" value = "2" id = "num"> 2 </input>
+	<input type = "radio" name = "r1" value = "3" id = "num"> 3 </input>
+	<input type = "radio" name = "r1" value = "4" id = "num"> 4 </input>
+	</h4>
+	
+	<input type = "number" name = "BP" placeholder = "Enter BP" required id = "entry">
+	<br>
+	<input type = "number" name = "CH" placeholder = "Enter cholestrol" required id = "entry">
+	<br>
+	<input type = "number" name = "maxhr" placeholder = "Enter Max Heart rate" required id = "entry">
+	<br>
+	<input type = "number" name = "STD" placeholder = "Enter ST depression" step = "any" required id = "entry">
+	<br>
+	<input type = "number" name = "fluro" placeholder = "Enter no of vessels fluro" step = "any" required id = "entry">
+	<br>
+	<input type = "number" name = "Th" placeholder = "Thallium" required id = "entry">
+	<br>
+	<input type = "submit" value = "Predict" id = "submit">
+	<br>	
+	<h2> <button> {{ msg }} </button></h2>
+	<a style = "font-size: 15px" href = "https://www.allbusinesstemplates.com/thumbs/c0cc5eed-c17d-4e24-8650-d8069bbbb52e_1.png"> Click here for more guidance on how to fill the form</a>
+	</form>
+  </div>
+</div>
+	
+
+</center>
+</body>
+</html>
