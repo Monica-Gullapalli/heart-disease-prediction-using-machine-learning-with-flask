@@ -10,7 +10,7 @@ app.secret_key = "monicaheart"
 app.config["MAIL_SERVER"] = "smtp.gmail.com"
 app.config["MAIL_PORT"] = 587
 app.config["MAIL_USERNAME"] = "heartdiseasepredictorml@gmail.com"
-app.config["MAIL_PASSWORD"] = "10heartdisease@predictor"
+app.config["MAIL_PASSWORD"] = "******************" //enter your email password here, mine is hidden for privacy purposes
 app.config["MAIL_USE_TLS"] = True
 app.config["MAIL_USE_SSL"] = False
 
