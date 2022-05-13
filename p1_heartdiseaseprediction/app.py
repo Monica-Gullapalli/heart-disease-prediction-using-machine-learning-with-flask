@@ -14,6 +14,7 @@ app.config["MAIL_PASSWORD"] = "******************" #enter your email password he
 app.config["MAIL_USE_TLS"] = True
 app.config["MAIL_USE_SSL"] = False
 
+
 mail = Mail(app)
 
 @app.route("/")
